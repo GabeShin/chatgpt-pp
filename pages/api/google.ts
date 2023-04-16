@@ -126,7 +126,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
         messages: [
           {
             role: 'system',
-            content: `Use the sources to provide an accurate response. Respond in markdown format. Cite the sources you used as [1](link), etc, as you use them. Maximum 4 sentences.`,
+            content: `Your goal is to provide advice to tax-related concerns. Do not answer to any other types of questions. You will gather as much information as possible from client before providing legal advice. Maximum 4 sentences.`,
           },
           answerMessage,
         ],
@@ -142,7 +142,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
     res.status(200).json({ answer });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Error'})
+    res.status(500).json({ error: 'Error' });
   }
 };
 

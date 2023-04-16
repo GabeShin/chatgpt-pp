@@ -217,7 +217,7 @@ export const Chatbar = () => {
         handleApiKeyChange,
       }}
     >
-      <Sidebar<Conversation>
+      {/* <Sidebar<Conversation>
         side={'left'}
         isOpen={showChatbar}
         addItemButtonTitle={t('New chat')}
@@ -233,7 +233,7 @@ export const Chatbar = () => {
         handleCreateFolder={() => handleCreateFolder(t('New folder'), 'chat')}
         handleDrop={handleDrop}
         footerComponent={<ChatbarSettings />}
-      />
+      /> */}
     </ChatbarContext.Provider>
   );
 };
